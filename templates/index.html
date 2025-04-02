@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Prism - Image Colorizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+    <h1>Auto Prism</h1>
+    <p>Convert your grayscale images into vibrant colors</p>
+</header>
+
+<div class="container">
+    <div class="upload-section">
+        <label for="upload-input" class="upload-box">
+            <i class="fas fa-upload"></i>
+            <p>Click to Upload</p>
+            <input type="file" id="upload-input" accept="image/*">
+        </label>
+    </div>
+
+    <div class="image-container">
+        <div class="image-box">
+            <h3>Uploaded Image</h3>
+            <img id="uploaded-image" src="" alt="Uploaded image will appear here">
+        </div>
+        <div class="image-box">
+            <h3>Colorized Image</h3>
+            <img id="colorized-image" src="" alt="Colorized image will appear here">
+        </div>
+    </div>
+
+    <div id="loading" class="loading" style="display: none; text-align: center; margin-top: 20px;">
+        <div class="spinner" style="width: 40px; height: 40px; border: 4px solid rgba(255, 255, 255, 0.3); border-top: 4px solid #ffffff; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto;"></div>
+        <p>Processing...</p>
+    </div>
+
+    <button id="download-btn" class="download-button" style="display:none;">Download Colorized Image</button>
+</div>
+
+<style>
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+</style>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
