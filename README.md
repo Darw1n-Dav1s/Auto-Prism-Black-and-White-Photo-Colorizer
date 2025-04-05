@@ -43,7 +43,17 @@ http://127.0.0.1:5000
 
 - **Frontend:** HTML, CSS, JavaScript  
 - **Backend:** Flask (Python)  
-- **Deep Learning Model:** OpenCV’s DNN module with Caffe  
+- **Deep Learning Model:** OpenCV’s DNN module with Caffe
+
+
+## Webpage UI
+
+![Webpage UI](templates/webrep.png)
+
+### Result
+
+![Colorized Output](templates/gitweb.png)
+
 
 
 
